@@ -7,6 +7,8 @@ out="$script_dir"/exclude.auto
 echo -n "" > $out
 
 dirsift -t git ~ >> $out
+dirsift -t borg ~ >> $out
+dirsift -t restic ~ >> $out
 
 other_list=$(dirsift -t hidden -t not-git ~)
 

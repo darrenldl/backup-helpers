@@ -3,7 +3,7 @@
 script_dir=$(dirname $(readlink -f "$0"))
 
 if [[ $1 == "" ]]; then
-  echo "Site is empty"
+  echo "Please enter site"
   exit 1
 fi
 

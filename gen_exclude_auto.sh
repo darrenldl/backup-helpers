@@ -12,6 +12,8 @@ dirsift -t restic ~ >> $out
 
 other_list=$(dirsift -t hidden -t not-git ~)
 
+touch "$script_dir"/include_pattern
+
 while IFS= read -r pat; do
   other_list=$(echo "$other_list" | grep -v "$pat")
 done < "$script_dir"/include_pattern

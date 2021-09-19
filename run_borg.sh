@@ -14,6 +14,9 @@ archive_name='{now:%Y-%m-%d_%H:%M:%S}'
 exclude_from_auto="$script_dir/exclude.auto"
 exclude_from_user="$script_dir/exclude.user"
 
+touch "$exclude_from_auto"
+touch "$exclude_from_user"
+
 export BORG_PASSPHRASE=$(cat $script_dir/passphrase)
 export BORG_RSH="ssh -i $script_dir/id_ed25519"
 

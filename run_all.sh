@@ -2,6 +2,8 @@
 
 script_dir=$(dirname $(readlink -f "$0"))
 
+$script_dir/gen_exclude_auto.sh
+
 while read p; do
   if [[ $p == \#* ]]
   then
